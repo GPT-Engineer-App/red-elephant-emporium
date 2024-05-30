@@ -1,4 +1,5 @@
-import { Container, VStack, HStack, Box, Text, Image, Button, IconButton, Heading } from "@chakra-ui/react";
+import { Container, VStack, HStack, Box, Image, Button, IconButton, Heading } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { FaShoppingCart, FaTshirt, FaHatCowboy, FaFlag, FaSign, FaMugHot } from "react-icons/fa";
 
 const products = [
@@ -30,6 +31,16 @@ const Index = () => {
           Republican Party Merchandise
         </Heading>
         <HStack spacing={8} wrap="wrap" justify="center">
+          <Link to="/rally">
+            <Button colorScheme="red" size="lg">
+              Rally
+            </Button>
+          </Link>
+          <Link to="/daily">
+            <Button colorScheme="blue" size="lg">
+              Daily
+            </Button>
+          </Link>
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
