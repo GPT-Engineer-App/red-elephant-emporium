@@ -11,6 +11,9 @@ function Navigation() {
         <Link as={RouterLink} to="/daily" color="blue.500" fontWeight="bold">
           Daily
         </Link>
+        <Link as={RouterLink} to="/" color="green.500" fontWeight="bold">
+          Home
+        </Link>
       </Flex>
     </Box>
   );
